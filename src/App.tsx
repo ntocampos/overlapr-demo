@@ -1,3 +1,5 @@
+import ScheduleDemo from "./components/ScheduleDemo";
+
 function App() {
   return (
     <main className="p-8">
@@ -10,6 +12,7 @@ function App() {
         sit Lorem proident culpa duis velit. Magna do excepteur in consequat
         sint commodo irure fugiat tempor sunt.
       </p>
+      <ScheduleDemo />
     </main>
   );
 }
