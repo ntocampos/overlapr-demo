@@ -1,3 +1,5 @@
+import { blockHeight } from "../../constants";
+
 type Props = {
   start: number;
   end: number;
@@ -14,10 +16,14 @@ function arrayRange(start: number, end: number): number[] {
 function Guides({ start, end }: Props) {
   const blocks = arrayRange(start, end);
   return (
-    <div className="pl-7 absolute w-full h-full">
+    <div className="pl-7 w-full h-full">
       {blocks.map((index) => (
         // Blocks with dashed borders
-        <div className="relative w-full h-24 border border-dashed border-r-0 border-b-0">
+        <div
+          key={index}
+          className="relative w-full border border-dashed border-r-0 border-b-0"
+          style={{ height: blockHeight }}
+        >
           {/* Marker circles */}
           <span className="absolute top-0 -mt-1 left-0 -ml-1 w-2 h-2 rounded bg-slate-300" />
           {/* Marker numbers */}
