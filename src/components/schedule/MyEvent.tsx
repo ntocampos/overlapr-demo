@@ -44,7 +44,7 @@ function MyEvent({
           <p>start: {start}</p>
           <p>end: {end}</p>
           <p>width: {formatPercent(width)}</p>
-          <p>height: {height}</p>
+          <p>height: {formatDecimal(height)}</p>
           <p>offset: {formatPercent(offset)}</p>
         </div>
       </div>
@@ -53,5 +53,6 @@ function MyEvent({
 }
 
 const formatPercent = (number: number) => `${Math.round(number * 100)}%`;
+const formatDecimal = (number: number) => number.toFixed(2);
 
 export default MyEvent;
