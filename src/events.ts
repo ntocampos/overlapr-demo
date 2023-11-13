@@ -1,6 +1,6 @@
 import { colors } from "./constants";
 
-export const events = [
+export const defaultEvents = [
   { id: "1", start: 2, end: 3, color: colors.blue },
   { id: "2", start: 2.5, end: 3.5, color: colors.indigo },
   { id: "3", start: 2.75, end: 3.75, color: colors.violet },
