@@ -7,4 +7,5 @@ export const colors = {
   purple: { bg: "bg-purple-500", shadow: "shadow-purple-500/50" },
   fuchsia: { bg: "bg-fuchsia-500", shadow: "shadow-fuchsia-500/50" },
   pink: { bg: "bg-pink-500", shadow: "shadow-pink-500/50" },
+  rose: { bg: "bg-rose-500", shadow: "shadow-rose-500/50" },
 };

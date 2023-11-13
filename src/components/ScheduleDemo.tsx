@@ -1,15 +1,13 @@
 import overlapr from "overlapr";
-import { colors } from "../constants";
+import { events } from "../events";
 import Guides from "./schedule/Guides";
 import MyEvent from "./schedule/MyEvent";
 
-const events = [
-  { id: "1", start: 3, end: 4, color: colors.blue },
-  { id: "2", start: 3.5, end: 4.5, color: colors.indigo },
-  { id: "3", start: 3.75, end: 4.75, color: colors.violet },
-];
-
+// The Overlapr processing happens in this step.
+// It's outside the component to keep things simple.
 const overlappedData = overlapr.processData(events);
+
+// minStart and maxEnd are only used to render the grid correctly.
 const minStart = Math.min(...events.map(({ start }) => start)) - 1;
 const maxEnd = Math.max(...events.map(({ end }) => end)) + 1;
 
