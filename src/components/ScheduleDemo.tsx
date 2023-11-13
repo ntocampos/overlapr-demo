@@ -13,8 +13,6 @@ const overlappedData = overlapr.processData(events);
 const minStart = Math.min(...events.map(({ start }) => start)) - 1;
 const maxEnd = Math.max(...events.map(({ end }) => end)) + 1;
 
-console.log({ overlappedData });
-
 function ScheduleDemo() {
   return (
     <>
