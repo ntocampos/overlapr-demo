@@ -30,6 +30,7 @@ function App() {
         To learn how the library was used to build this UI, go to the{" "}
         <Highlight>src/components/ScheduleDemo.tsx</Highlight> and{" "}
         <Highlight>src/components/schedule/MyEvent.tsx</Highlight> files.
+        Lastly, you can hover each event to check out its rendering properties.
       </Text>
       <ScheduleDemo />
     </main>

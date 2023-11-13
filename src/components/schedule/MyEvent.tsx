@@ -19,7 +19,7 @@ function MyEvent({
 }: Props) {
   return (
     <div
-      className="absolute px-2"
+      className="group absolute px-2 cursor-pointer"
       style={{
         width: `${width * 100}%`,
         height: height * blockHeight,
@@ -30,10 +30,22 @@ function MyEvent({
       <div
         className={`w-full h-full ${color.bg} rounded-xl shadow-lg ${color.shadow} flex justify-center items-center`}
       >
-        <p className="text-white font-bold">{id}</p>
+        <p className="transition-opacity text-white font-bold group-hover:opacity-0">
+          {id}
+        </p>
+        <div
+          className={`absolute transition-opacity text-slate-500 font-semibold text-xs font-mono p-2 bg-neutral-50 opacity-0 group-hover:opacity-100 rounded-lg shadow ${color.shadow}`}
+        >
+          <p>start: {start}</p>
+          <p>width: {formatPercent(width)}</p>
+          <p>height: {height}</p>
+          <p>offset: {formatPercent(offset)}</p>
+        </div>
       </div>
     </div>
   );
 }
+
+const formatPercent = (number: number) => `${Math.round(number * 100)}%`;
 
 export default MyEvent;

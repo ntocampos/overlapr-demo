@@ -13,7 +13,7 @@ const maxEnd = Math.max(...events.map(({ end }) => end)) + 1;
 
 function ScheduleDemo() {
   return (
-    <div className="p-4 border-l-2 border-solid border-pink-500">
+    <div className="p-4 border-l-2 border-solid border-slate-500">
       <h2 className="mb-12 font-semibold">Fictional day schedule</h2>
       <div className="relative">
         <Guides start={minStart} end={maxEnd} />
