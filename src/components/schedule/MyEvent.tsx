@@ -41,8 +41,8 @@ function MyEvent({
         <div
           className={`absolute transition-opacity text-slate-500 font-semibold text-xs font-mono p-2 bg-neutral-50 opacity-0 group-hover:opacity-100 rounded-lg shadow ${color.shadow}`}
         >
-          <p>start: {start}</p>
-          <p>end: {end}</p>
+          <p>start: {formatDecimal(start)}</p>
+          <p>end: {formatDecimal(end)}</p>
           <p>width: {formatPercent(width)}</p>
           <p>height: {formatDecimal(height)}</p>
           <p>offset: {formatPercent(offset)}</p>
